@@ -10,4 +10,5 @@ func main() {
 	fmt.Println(env)
 	init_folder(env);
 	ReadConfig(env);
+	PushToGit()
 }
