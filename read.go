@@ -17,6 +17,11 @@ type Env struct {
 	path string
 }
 
+type Exec struct {
+	app  string
+	args []string
+}
+
 func ReadEnv() []Env {
 
 	err := godotenv.Load()
