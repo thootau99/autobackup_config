@@ -98,7 +98,7 @@ func PushToGit() {
 	commitExe.Stdout = &out
     commitErr := commitExe.Run()
     if nil != commitErr {
-    	fmt.Println("ERROR!")
+    	fmt.Println("ERROR!", commitErr)
     	return
     }
 
