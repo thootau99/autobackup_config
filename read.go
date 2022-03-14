@@ -34,6 +34,9 @@ func ReadEnv() []Env {
 		if strings.Contains(element, "backup_config") {
 			envArray := strings.Split(element, "=");
 			envName := strings.Split(envArray[0], "backup_config_")
+			if (envName[len(envName) - 1] == "PWD") {
+				continue
+			} 
 			env := Env{
 				name: envName[len(envName) - 1],
 				path: envArray[len(envArray) - 1],
